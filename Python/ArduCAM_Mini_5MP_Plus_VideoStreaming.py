@@ -1,3 +1,11 @@
+'''
+Code sourced from:
+@ljp-while on Github
+July 15, 2021
+PICO_SPI_CAM
+https://github.com/ArduCAM/PICO_SPI_CAM/blob/master/Python/ArduCAM_Mini_5MP_Plus_VideoStreaming.py
+'''
+
 import time as utime
 import busio
 import board
@@ -5,6 +13,11 @@ import usb_cdc
 from Arducam import *
 from board import *
 
+filename = ''
+timeLapseLength = 60
+lapseTimeStamp = 0
+is_header = False
+total_time = 0
 
 mode = 0
 start_capture = 0
@@ -259,6 +272,5 @@ while True:
         else:
             mode=0
             start_capture=0
-
 
 
